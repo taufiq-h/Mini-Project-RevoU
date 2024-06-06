@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/ef3d0a527b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="css/img/logo-1.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#profile">Our Profile</a></li>
+                    <li><a href="#achievement">Achievement</a></li>
+                    <li><a href="#message">Message Us</a></li>
+                    <i class="fas fa-times" onclick="closemenu('closemenu')"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu('openmenu')"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer (?)</p>
+                <h1>Hi, I'm <span>Taufiq Hidayat</span><br>From Indonesia</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------Our Profile------------ -->
+    <div id="profile">
+        <div class="container">
+            <div class="row">
+                <div class="profile-col-1">
+                    <img src="css/img/user.JPG">
+                </div>
+                <div class="profile-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, my name's Taufiq Hidayat. I've just graduated with a Bachelor's Degree (S1) majoring in Information Systems from the Computer Science Faculty at Universitas Putra Indonesia "YPTK" Padang. I completed my bachelor's education with a cumlaude distinction and a GPA of 3.73. I'm very interested in working in the field of system development and I am currently seeking employment related to it.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Laravel</span><br>Using Laravel 10/11</li>
+                            <li><span>CodeIgniter</span><br>Using CI4</li>
+                            <li><span>More</span><br>More skils</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Experience 1</span><br></li>
+                            <li><span>Experience 2</span><br></li>
+                            <li><span>More Experience</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelor's Degree</span><br>Universita Putra Indonesia "YPTK" Padang</li>
+                            <!-- <li><span>Software Engineer</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Software Engineer</span><br>Designing Web/App Interfaces</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------Achievement------------- -->
+    <div id="achievement">
+        <div class="container">
+            <h1 class="sub-title">Achievement</h1>
+            <div class="achievement-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Nothing 1</h2>
+                    <p>This is description for achievement 1. Currently nothing, because nothing and nothing, nothing, then nothing, and more. now i keep nothing and become nothing, maybe?</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>Nothing 2</h2>
+                    <p>This is description for achievement 2. Currently nothing, because nothing and nothing, nothing, then nothing, and more. now i keep nothing and become nothing maybe?</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>Nothing 3</h2>
+                    <p>This is description for achievement 2. Currently nothing, because nothing and nothing, nothing, then nothing, and more. now i keep nothing and become nothing, maybe?</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ------------Message Us------------- -->
+    <div id="message">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>taufiqh@example.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>082388862925 (example)</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="your name" required>
+                        <input type="date" name="date" required>
+                        <select name="Gender" required>
+                            <option value="">--</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <textarea name="message" rows="6" placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <!-- result display box -->
+                    <div id="result" class="result-box"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Taufiq - Made For Mini Project</p>
+        </div>
+    </div>
+
+    <!-- ---------side Menu Android------ -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
