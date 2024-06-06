@@ -25,3 +25,4 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("result").innerHTML = result;
     });
 });
+
